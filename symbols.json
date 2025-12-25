@@ -1,0 +1,14 @@
+{
+  "symbols": [
+    "AAPL","ADBE","AEP","ALB","AMD","AMT","AMZN","APD","AVGO","BA",
+    "BAC","BKNG","BLK","BMY","C","CAT","CCI","CHTR","CL","CMCSA",
+    "COP","COST","CRM","CSCO","CVS","CVX","DE","DHR","DIS","DOW",
+    "DUK","EA","EOG","ETN","EXC","FCX","GE","GOOGL","GS","HAL",
+    "HD","HON","INTC","JNJ","JPM","KMB","KMI","KO","LIN","LLY",
+    "LMT","LOW","MA","MCD","MDLZ","META","MLM","MO","MPC","MRK",
+    "MS","MSFT","NEE","NFLX","NKE","NUE","NVDA","ORCL","OXY","PEP",
+    "PFE","PG","PLD","PM","PSX","ROST","RTX","SBUX","SHW","SLB",
+    "SO","T","TJX","TMO","TMUS","TSLA","UNH","UNP","UPS","V",
+    "VZ","WFC","WMT","XOM"
+  ]
+}

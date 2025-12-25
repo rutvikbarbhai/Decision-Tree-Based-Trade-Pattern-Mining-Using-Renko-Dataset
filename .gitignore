@@ -1,0 +1,7 @@
+svm_env
+.idea
+.env
+.venv
+__pycache__
+analysis.noquads.atr.251009.10
+selected_files

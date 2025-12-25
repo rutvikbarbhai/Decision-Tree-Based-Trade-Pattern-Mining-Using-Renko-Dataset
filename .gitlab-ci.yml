@@ -1,0 +1,61 @@
+# include:
+#   - local: '.gitlab/ci/*.yaml'
+
+stages:
+  - test
+  - build
+  # - deploy
+
+.test_scripts: &test_scripts
+  - apt-get update && apt-get install -y git
+  - pip install -r requirements.txt
+  - pip install flake8 pytest pytest-cov pytest-mock pytest-profiling
+
+########################################################################################################################
+# Test jobs
+########################################################################################################################
+pytest:
+  stage: test
+  image: python:3.11-slim
+  tags:
+    - linux
+    - dind
+  script:
+    - echo "This is the test stage"
+    - *test_scripts
+    - pytest tests/ -s --cov --cov-report html --junitxml=report.xml
+    - echo "Testing done ..."
+  artifacts:
+    when: always
+    paths:
+      - htmlcov/
+    reports:
+      junit: report.xml
+
+static_analysis:
+  stage: test
+  image: python:3.11-slim
+  tags:
+    - linux
+    - dind
+  script:
+    - echo "This is the static-analysis"
+    - *test_scripts
+    - flake8
+    - echo "Static analysis done ..."
+
+build-airflow:
+  stage: build
+  only:
+    - master
+  tags:
+    - shell
+  script:
+    - docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD $REGISTRY_HOST
+    - docker build --compress --pull -t $CONTAINER_RELEASE_IMAGE:$CI_COMMIT_SHORT_SHA -t $CONTAINER_RELEASE_IMAGE:latest -f Dockerfile .
+    - docker push $CONTAINER_RELEASE_IMAGE:$CI_COMMIT_SHORT_SHA
+    - docker push $CONTAINER_RELEASE_IMAGE:latest
+    - docker image rm $CONTAINER_RELEASE_IMAGE:$CI_COMMIT_SHORT_SHA
+    - docker image rm $CONTAINER_RELEASE_IMAGE:latest
+  variables:
+    CONTAINER_RELEASE_IMAGE: $REGISTRY_HOST/fintech/$CI_PROJECT_NAME
