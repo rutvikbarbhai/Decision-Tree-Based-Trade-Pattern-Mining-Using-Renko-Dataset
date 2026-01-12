@@ -1,4 +1,4 @@
-# <img src="https://github.com/user-attachments/assets/72d58f44-ef7b-48ee-b8b0-b4d646eec225" width="45px"/> Mining Market Patterns Using Renko Dataset
+# <img src="https://github.com/user-attachments/assets/72d58f44-ef7b-48ee-b8b0-b4d646eec225" width="39px"/> Mining Market Patterns Using Renko Dataset
 ## <img src="https://github.com/user-attachments/assets/dcdcffb4-c4e2-40ee-84cc-aca8612d257e" width="30px">Summary
 
 This repository implements an end-to-end quantitative machine learning pipeline developed during the Xcitium–NuFintech Internship. 
