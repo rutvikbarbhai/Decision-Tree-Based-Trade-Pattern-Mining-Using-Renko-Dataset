@@ -1,4 +1,4 @@
-# <img src="https://github.com/user-attachments/assets/72d58f44-ef7b-48ee-b8b0-b4d646eec225" width="39px"/> Decision Tree Based Trade Pattern Mining Using Renko Dataset
+#  <img src="https://github.com/user-attachments/assets/fa3efb02-55b5-4774-8a26-9aaad86acf1e" width="30">  Decision Tree Based Trade Pattern Mining Using Renko Dataset
 ## <img src="https://github.com/user-attachments/assets/dcdcffb4-c4e2-40ee-84cc-aca8612d257e" width="30px">Summary
 
 This repository implements an end-to-end quantitative machine learning pipeline developed during the Xcitium–NuFintech Internship. 
