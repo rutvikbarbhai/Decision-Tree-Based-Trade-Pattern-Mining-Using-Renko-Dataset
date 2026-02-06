@@ -1,7 +1,7 @@
 # <img src="https://github.com/user-attachments/assets/fa3efb02-55b5-4774-8a26-9aaad86acf1e" width="30"> Decision Tree Based Trade Pattern Mining Using Renko Dataset
 ## <img src="https://github.com/user-attachments/assets/dcdcffb4-c4e2-40ee-84cc-aca8612d257e" width="30px">Summary
 
-This repository implements an end-to-end quantitative machine learning pipeline developed during My Xcitium–NuFintech(Formerly Comodo Group)  Internship. 
+This repository implements an end-to-end quantitative machine learning pipeline developed during My Xcitium–NuFintech(Formerly Comodo Group) Internship. 
 The project focuses on transforming raw financial features into interpretable, statistically validated, and production-ready trading patterns using leakage-safe feature engineering, decision tree–based clustering, and rigorous multi-stage validation using renko dataset . The core philosophy of this project is robustness over complexity prioritizing explainability, out of sample reliability, and temporal stability rather than black-box performance.
 
 ## <img src="https://github.com/user-attachments/assets/f3dcee8e-e008-457a-97fb-d3848b425713" height="30px" style="vertical-align:text-bottom;"> Repository Contents
